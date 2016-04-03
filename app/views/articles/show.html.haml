@@ -2,3 +2,5 @@
 %p= @article.content
 
 = link_to "Kembali", root_path
+= link_to "Edit", edit_article_path(@article)
+= link_to "Hapus", article_path(@article), method: :delete, data: { confirm: "Apakah kamu yakin?" }
