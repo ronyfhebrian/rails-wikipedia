@@ -1,11 +1,6 @@
-%h1 This is index page
-
 - @articles.each do |article|
   %h2= link_to article.title, article
   %p
     Published at
     = article.created_at.strftime('%d %B, %Y')
   %p= truncate(article.content, length: 50)
-
-- if user_signed_in?
-  = link_to "Artikel Baru", new_article_path
